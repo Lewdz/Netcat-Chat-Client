@@ -2,7 +2,12 @@ import os
 import sys
 import time
 import socket
-import pyaudio
+try:
+    import pyaudio
+except:
+    print ("Pyaudio is required. 'pip install pyaudio'")
+    time.sleep(10)
+    exit()
 from signal import signal, SIGINT
 from sys import exit
 import subprocess
